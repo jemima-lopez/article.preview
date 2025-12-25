@@ -6,6 +6,13 @@
     font-style: normal;
 }
 
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -14,7 +21,7 @@
 
 body{
     font-family: 'Manrope', sans-serif;
-    background-color: hsl(210, 46%, 95%);
+    background-color: var(--light-grayish-blue);
     height: 100vh;
     display: flex;
     justify-content: center;   
@@ -40,14 +47,14 @@ img{
 
 h1{
     font-size: 1.5rem;   
-    color: hsl(217, 19%, 35%);
+    color: var(--very-dark-grayish-blue);
     margin: 2rem 2.5rem 1rem 2rem;
     margin-right: 2.5rem;
 }
 
 .article-text{
     font-size: 1rem;
-    color: hsl(212, 23%, 69%);
+    color: var(--grayish-blue);
     margin: 0 2rem 2rem 2rem;
     line-height: 1.5rem;
 }
@@ -66,21 +73,21 @@ h1{
     display: flex;
     font-weight: 600;
     font-size: smaller;
-    color: hsl(217, 19%, 35%);
+    color: var(--very-dark-grayish-blue);
     margin-left: 1rem;
     margin-top: 1.5;
 }
 .ptwo{
-    color: hsl(212, 23%, 69%);
+    color: var(--grayish-blue);
     font-weight: 400;
     margin-top: 0.3rem;
     margin-left: 1rem;
     font-size: smaller;
 }
 
-button{
-    margin-left: auto;
-    margin-right: 3rem;
+.share{
+    margin-left: 10rem;
+    margin-right: auto;
     width: 2.2rem;
     height: 2.2rem;
     border: none;
@@ -88,15 +95,43 @@ button{
     align-self: center;
     color: white;
     font-size: 1rem;
-    cursor: pointer;
 }
-button:hover{
-    background-color: hsl(217, 19%, 35%);
+.share.color-change{
+    background-color: var(--very-dark-grayish-blue);
+
 }
 
-button img{
-    width: 60%;
-    height: 60%;
+.share-button{
+    background-color: var(--light-grayish-blue);
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.share-button .share-text{
+    visibility: hidden;
+    width: 170px;
+    background-color: var(--very-dark-grayish-blue);
+    color: white;
+    text-align: left;
+    border-radius: 5px;
+    padding: 20px 75px;
+    position: absolute;
+    z-index: 1;
+    bottom: -8px;
+    left: 50%;
+    margin-left: -264px;
+}
+
+.share-button:hover .share-text{
+    visibility: visible;
+    -webkit-animation: fadeIn 0.3s;
+    animation: fadeIn 0.3s;
+    box-shadow: 1px 1px 20px gray;
 }
 
 
