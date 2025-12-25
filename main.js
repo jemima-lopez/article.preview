@@ -1,10 +1,8 @@
 
-function shareButton() {
-    const shareButton = document.querySelector('.share-button');
-    shareButton.classList.toggle('show-share-options');
-}
+const shareBtn = document.getElementById('shareBtn');
+const shareBox = document.getElementById('shareBox');
 
-function click() {
-    const iconShare = document.getElementById('icon-share');
-    iconShare.classList.toggle('color-change');
-}
+shareBtn.addEventListener('click', () => {
+    shareBtn.classList.toggle('active');
+    shareBox.classList.toggle('show');
+});
